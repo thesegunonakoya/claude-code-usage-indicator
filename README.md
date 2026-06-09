@@ -51,6 +51,25 @@ Then restart GNOME Shell:
 
 Start Claude Code; the label appears after the first response.
 
+## Update
+
+When a new version is pushed, pull and re-run the installer:
+
+```bash
+cd claude-code-usage-indicator
+git pull
+./install.sh
+```
+
+The installer is idempotent — it overwrites the statusline script and extension files in place and re-merges your settings without touching anything else.
+
+Then, depending on what changed:
+
+- **Statusline script or settings** — applies automatically on your next Claude Code session, nothing to restart
+- **Extension files** (`extension.js`, `metadata.json`, `stylesheet.css`) — GNOME Shell caches loaded extensions, so restart it: <kbd>Alt</kbd>+<kbd>F2</kbd> → `r` → <kbd>Enter</kbd> on X11, or log out and back in on Wayland
+
+When in doubt, restart the shell.
+
 ## Uninstall
 
 ```bash
