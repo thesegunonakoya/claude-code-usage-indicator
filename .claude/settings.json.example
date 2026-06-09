@@ -3,6 +3,6 @@
     "type": "command",
     "command": "~/.claude/statusline.sh",
     "padding": 0,
-    "refreshInterval": 10
+    "refreshInterval": 1
   }
 }

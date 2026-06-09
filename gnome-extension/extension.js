@@ -7,7 +7,7 @@ import * as Main      from 'resource:///org/gnome/shell/ui/main.js';
 import * as PanelMenu from 'resource:///org/gnome/shell/ui/panelMenu.js';
 
 const CACHE_PATH  = `${GLib.get_user_runtime_dir()}/claude-usage.json`;
-const POLL_SECS   = 5;
+const POLL_SECS   = 1;
 const STALE_SECS  = 30;
 
 export default class ClaudeUsageExtension extends Extension {

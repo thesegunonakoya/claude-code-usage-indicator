@@ -1,6 +1,6 @@
 # Claude Code Usage Indicator
 
-A GNOME Shell top-bar indicator that shows your real-time [Claude Code](https://claude.com/claude-code) 5-hour and 7-day usage percentages.
+A GNOME Shell top-bar indicator that shows your [Claude Code](https://claude.com/claude-code) 5-hour and 7-day usage percentages in real time — refreshed every second.
 
 ![Claude Code usage indicator in the GNOME top bar](docs/screenshot.png)
 
@@ -15,13 +15,13 @@ claude code (statusLine hook)
     ↓
 $XDG_RUNTIME_DIR/claude-usage.json     ← shared state (per-user tmpfs, no disk churn)
     ↑
-GNOME Shell extension                  ← polls every 5 s
+GNOME Shell extension                  ← polls every 1 s
     │
     ↓
 Top bar label: "Claude Code  5h: 19%  7d: 5%"
 ```
 
-Claude Code runs the statusline script after every response (and every 10 s while a session is open, via `refreshInterval`). The script extracts the `rate_limits` data from the JSON payload and writes a small cache file. The GNOME extension polls that file and renders the label. If the file goes stale for more than 30 s, the label switches to `Claude Code  offline`.
+Claude Code runs the statusline script after every response (and every second while a session is open, via `refreshInterval`). The script extracts the `rate_limits` data from the JSON payload and writes a small cache file. The GNOME extension polls that file every second and renders the label, so the indicator tracks your usage in real time. If the file goes stale for more than 30 s, the label switches to `Claude Code  offline`.
 
 ## Requirements
 

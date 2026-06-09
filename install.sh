@@ -53,7 +53,7 @@ info "Installed statusline script → $STATUSLINE_DST"
 if [[ -f "$SETTINGS" ]]; then
   if command -v jq &>/dev/null; then
     TMP=$(mktemp)
-    jq '. + {"statusLine": {"type": "command", "command": "~/.claude/statusline.sh", "padding": 0, "refreshInterval": 10}}' \
+    jq '. + {"statusLine": {"type": "command", "command": "~/.claude/statusline.sh", "padding": 0, "refreshInterval": 1}}' \
       "$SETTINGS" > "$TMP" && mv "$TMP" "$SETTINGS"
     info "Merged statusLine key into $SETTINGS"
   else
