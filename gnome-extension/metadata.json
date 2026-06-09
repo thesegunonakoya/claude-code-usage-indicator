@@ -1,0 +1,8 @@
+{
+  "uuid": "claude-code-usage@thesegunonakoya.github.io",
+  "name": "Claude Code Usage",
+  "description": "Shows Claude Code 5-hour and 7-day usage in the GNOME top bar.",
+  "version": 1,
+  "shell-version": ["45", "46", "47", "48", "49"],
+  "url": "https://github.com/thesegunonakoya/claude-code-usage-indicator"
+}
