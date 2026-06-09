@@ -2,9 +2,7 @@
 
 A GNOME Shell top-bar indicator that shows your real-time [Claude Code](https://claude.com/claude-code) 5-hour and 7-day usage percentages.
 
-```
-Claude Code  5h: 19%  7d: 5% reset 2h13m
-```
+![Claude Code usage indicator in the GNOME top bar](docs/screenshot.png)
 
 ## How it works
 
